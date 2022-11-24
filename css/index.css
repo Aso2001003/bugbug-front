@@ -67,8 +67,6 @@
 }
 
 .recipe__user, .recomRecipe__list__item__user {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   height: 100%;
   display: flex;
@@ -111,8 +109,6 @@
 }
 
 .recipe__heartBtn, .recomRecipe__list__item__heartBtn {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   height: 100%;
   display: flex;
@@ -165,8 +161,6 @@
 
 .recipe__tag, .recomRecipe__list__item__tag {
   display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   height: 30px;
   padding: 8px 10px;

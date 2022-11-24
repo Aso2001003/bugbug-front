@@ -40,14 +40,6 @@
   transition: border 0.3s;
   will-change: border;
 }
-.login__form__input::-moz-placeholder {
-  color: #acacac;
-  font-family: "Kiwi Maru", sans-serif;
-}
-.login__form__input:-ms-input-placeholder {
-  color: #acacac;
-  font-family: "Kiwi Maru", sans-serif;
-}
 .login__form__input::placeholder {
   color: #acacac;
   font-family: "Kiwi Maru", sans-serif;

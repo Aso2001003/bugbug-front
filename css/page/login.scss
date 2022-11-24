@@ -1,5 +1,5 @@
-@use "../../base/mixin" as m; // use mixin as 'm'
-@use "../../base/variables" as v; // use variables as 'v'
+@use "../base/mixin" as m; // use mixin as 'm'
+@use "../base/variables" as v; // use variables as 'v'
 
 /* ログイン画面用にmainクラスを修正 */
 .main {

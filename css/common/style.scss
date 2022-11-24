@@ -1,0 +1,9 @@
+// base
+@use '../base/reset';
+@use '../base/mixin' as m;
+@use '../base/variables' as v;
+
+// common
+@use './common';
+@use './header';
+@use './footer';

@@ -1,5 +1,6 @@
 @use "../base/mixin" as m; // use mixin as 'm'
 @use "../base/variables" as v; // use variables as 'v'
+@use "../module/__module-recipe"; // use variables as 'v'
 
 /* --- ヘッダー --- */
 .header {

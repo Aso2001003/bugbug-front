@@ -1,6 +1,6 @@
-@use "../../base/mixin" as m; // use mixin as 'm'
-@use "../../base/variables" as v; // use variables as 'v'
-@use "../../module/__module-recipe.scss";
+@use "../base/mixin" as m; // use mixin as 'm'
+@use "../base/variables" as v; // use variables as 'v'
+@use "../module/__module-recipe.scss";
 
 /* --- おすすめレシピ一覧 --- */
 .recomRecipe {
