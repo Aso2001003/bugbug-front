@@ -1,0 +1,91 @@
+@use "../../base/mixin" as m; // use mixin as 'm'
+@use "../../base/variables" as v; // use variables as 'v'
+@use "../../module/__module-recipe.scss";
+
+/* --- おすすめレシピ一覧 --- */
+.recomRecipe {
+  width: 85%;
+  @include m.mq(tab) {
+    width: 90%;
+  }
+  @include m.mq(sp) {
+    width: 100%;
+  }
+}
+.recomRecipe__title {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 3px;
+    border-radius: 100px;
+    background: v.$color_main;
+  }
+  @include m.mq(tab) {
+  }
+  @include m.mq(sp) {
+  }
+}
+.recomRecipe__title__text {
+  display: block;
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin-left: 15px;
+  margin-right: 15px;
+  white-space: nowrap;
+  @include m.mq(sp) {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.recomRecipe__list {
+  @extend .recipeList;
+}
+.recomRecipe__list__item {
+  @extend .recipe;
+}
+.recomRecipe__list__item__img {
+  @extend .recipe__img;
+}
+.recomRecipe__list__item__userAction {
+  @extend .recipe__userAction;
+}
+.recomRecipe__list__item__user {
+  @extend .recipe__user;
+}
+.recomRecipe__list__item__user__icon {
+  @extend .recipe__user__icon;
+}
+.recomRecipe__list__item__user__name {
+  @extend .recipe__user__name;
+}
+.recomRecipe__list__item__heartBtn {
+  @extend .recipe__heartBtn;
+  ion-icon {
+    @extend .recipe__heart;
+  }
+}
+.recomRecipe__list__item__heartNum {
+  @extend .recipe__heartNum;
+}
+.recomRecipe__list__item__recipeName {
+  @extend .recipe__name;
+}
+.recomRecipe__list__item__tags {
+  @extend .recipe__tags;
+}
+.recomRecipe__list__item__tag {
+  @extend .recipe__tag;
+}
+.recomRecipe__list__item__tag__name {
+  @extend .recipe__tag__name;
+}
+

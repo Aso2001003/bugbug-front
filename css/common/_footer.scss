@@ -1,0 +1,109 @@
+@use "../base/mixin" as m; // use mixin as 'm'
+@use "../base/variables" as v; // use variables as 'v'
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background: url("../img/footer.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: height 0.4s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+              0 0 8px rgba(0, 0, 0, 0.2),
+              0 0 5px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  @include m.mq(tab) {
+    height: 180px;
+  }
+  @include m.mq(sp) {
+    height: 140px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+  }
+}
+
+.footer__logo {
+  width: 140px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: width 0.4s, top 0.4s, left 0.4s;
+  @include m.mq(tab) {
+    width: 120px;
+    top: 15px;
+    left: 15px;
+  }
+  @include m.mq(sp) {
+    width: 100px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.footer__nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  li {
+    list-style: none;
+    margin-left: 30px;
+    margin-right: 30px;
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Kiwi Maru", sans-serif;
+      color: v.$color_white;
+      text-decoration: none;
+      transition: text-decoration 0.3s;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  @include m.mq(tab) {
+    li {
+      margin-left: 20px;
+      margin-right: 20px;
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+  @include m.mq(sp) {
+    li {
+      margin-left: 10px;
+      margin-right: 10px;
+      a {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.footer_copyright {
+  width: 100%;
+  height: 30px;
+  background: v.$color_green;
+  font-size: 12px;
+  font-family: "Nova Square", sans-serif;
+  color: v.$color_white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
