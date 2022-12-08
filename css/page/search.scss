@@ -2,8 +2,16 @@
 @use "../base/variables" as v; // use variables as 'v'
 @use "../module/__module-recipe.scss";
 
-/* --- おすすめレシピ一覧 --- */
-.popRecipe {
+.main.js-headerScrollOn {
+  padding-top: 100px;
+  height: calc(100% - 60px);
+  @include m.mq(sp) {
+    height: calc(100% - 140px);
+    padding-top: 140px;
+  }
+}
+
+.searchRecipe {
   width: 85%;
   @include m.mq(tab) {
     width: 90%;
@@ -12,27 +20,17 @@
     width: 100%;
   }
 }
-.popRecipe__title {
+.searchRecipe__title {
   width: 100%;
+  height: 50px;
   margin-bottom: 20px;
+  border-bottom: 2px solid v.$color_gray02;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    width: 40%;
-    height: 3px;
-    border-radius: 100px;
-    background: v.$color_main;
-  }
-  @include m.mq(tab) {
-  }
-  @include m.mq(sp) {
-  }
 }
-.popRecipe__title__text {
+.searchRecipe__title__text {
   display: block;
   font-size: 16px;
   letter-spacing: 3px;
@@ -46,25 +44,25 @@
     margin-right: 10px;
   }
 }
-.popRecipe__list {
+.searchRecipe__list {
   @extend .recipeList;
 }
-.popRecipe__list__item {
+.searchRecipe__list__item {
   @extend .recipe;
 }
-.popRecipe__list__item__img {
+.searchRecipe__list__item__img {
   @extend .recipe__img;
 }
-.popRecipe__list__item__userAction {
+.searchRecipe__list__item__userAction {
   @extend .recipe__userAction;
 }
-.popRecipe__list__item__user {
+.searchRecipe__list__item__user {
   @extend .recipe__user;
 }
-.popRecipe__list__item__user__icon {
+.searchRecipe__list__item__user__icon {
   @extend .recipe__user__icon;
 }
-.popRecipe__list__item__user__name {
+.searchRecipe__list__item__user__name {
   @extend .recipe__user__name;
 }
 .heartBtn {
@@ -76,16 +74,16 @@
 .heartNum {
   @extend .recipe__heartNum;
 }
-.popRecipe__list__item__recipeName {
+.searchRecipe__list__item__recipeName {
   @extend .recipe__name;
 }
-.popRecipe__list__item__tags {
+.searchRecipe__list__item__tags {
   @extend .recipe__tags;
 }
-.popRecipe__list__item__tag {
+.searchRecipe__list__item__tag {
   @extend .recipe__tag;
 }
-.popRecipe__list__item__tag__name {
+.searchRecipe__list__item__tag__name {
   @extend .recipe__tag__name;
 }
 

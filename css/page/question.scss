@@ -1,6 +1,5 @@
-@use "../../base/mixin" as m; // use mixin as 'm'
-@use "../../base/variables" as v; // use variables as 'v'
-@use "../../common/_header.scss";
+@use "../base/mixin" as m; // use mixin as 'm'
+@use "../base/variables" as v; // use variables as 'v'
 
 .logo {
   @extend .logo;
@@ -37,27 +36,64 @@
   font-family: "Kiwi Maru";
 }
 
+
+.question__btns {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 350px;
+  height: 200px;
+
+}
 /*ボタンのスタイル*/
 .question__btn {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  margin: 30px;
+  border-radius: 100%;
   font-size: 14px;
   transition: opacity 0.3s;
+  overflow: hidden;
+  z-index: 1;
   &--yes {
     border: 2px solid #ffffff;
     color: #ffffff;
     background: #147647;
+    &::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      background: v.$color_green;
+      border-radius: 100%;
+      z-index: 50;
+      transition: width 0.3s, height 0.3s;
+      will-change: width, height;
+    }
+    &:hover::before{
+      width: 150px;
+      height: 150px;
+    }
   }
   &--no {
     border: 2px solid #147647;
     color: #147647;
     background: #ffffff;
+    &:hover {
+      opacity: 0.6;
+    }
   }
-  &:hover {
-    opacity: 0.8;
+  span {
+    display: block;
+    z-index: 100;
   }
 }
